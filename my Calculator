@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calculator</title>
+    <style>
+      #clr{
+          width:94px;
+          background-color: #1d9e53;
+          height: 30px;
+      }
+      #form{
+          width: 194px;
+          height: 291px;
+          background-color:#1e1e1e;
+      }
+      .formstyle{
+          width: 188px;
+          height: 40px;
+          margin: auto;
+          padding: 0px;
+          background-color:#46c73b;
+      }
+      #button{
+          background-color:#3ed9e4;
+          width: 35px;
+          margin: 0px;
+          padding: auto;
+      }
+
+      #equal{
+          width: 35px;
+          background-color: #db3e4b;
+      }
+      #del{
+          width: 94px;
+          height: 30px;
+          background-color: #bee948;
+      }
+
+
+    </style>
+</head>
+<script type="text/javascript">
+    function backspace(){
+        var prevalue=form.answer.value;
+        form.answer.value=prevalue.substr(0,prevalue.length-1);
+    }
+
+    function fnsin(){
+            
+          //  flag+=1;
+            form.answer.value+=Math.sin(form.answer.value);
+    }
+
+    function rt(){
+        
+        form.answer.value=Math.sqrt(form.answer.value);
+}
+
+function cos(form){
+        
+        form.answer.value=Math.cos(form.answer.value);
+}
+
+function tan(){
+        
+        form.answer.value=Math.tan(form.answer.value);
+}
+
+
+function log(){
+        
+        form.answer.value=Math.log(form.answer.value);
+}
+
+function rt(){
+        
+        form.answer.value=Math.sqrt(form.answer.value);
+}
+
+function pow(){
+        form.answer.value = Math.pow(x,y);
+}
+</script>
+<body style="background-image:url(image_1494.jpeg)">
+
+<div class="formstyle">
+    <form name="form" id="form">
+        <input type="text" class="formstyle"name="answer"><br><br>
+        
+        <input type="button" id="button" value="1" onclick="form.answer.value += '1'">
+        <input type="button" id="button" value="2" onclick="form.answer.value += '2'">
+        <input type="button" id="button" value="3" onclick="form.answer.value += '3'">
+        
+        <input type="button" id="button" value="/" onclick="form.answer.value += '/'">
+        <input type="button" id="button" value="(" onclick="form.answer.value += '('">
+        <br><br>
+        <input type="button" id="button" value="sin" onclick="fnsin()">
+    <input type="button" id="button" name="cos" value="cos" onclick="if(checknum(this.form.answer.value)) {cos(this.form)}">
+        <input type="button" id="button" value="tan" onclick="tan()">
+        <input type="button" id="button" value="^2" onclick="pow()">
+        <input type="button" id="button" value=")" onclick="form.answer.value += ')'">
+       
+        <br><br>
+        <input type="button" id="button" value="4" onclick="form.answer.value += '4'">
+        <input type="button" id="button" value="5" onclick="form.answer.value += '5'">
+        
+        <input type="button" id="button" value="6" onclick="form.answer.value += '6'">
+        <input type="button" id="button" value="*" onclick="form.answer.value += '*'">
+        <input type="button" id="button" value="rt" onclick="rt()">
+        
+         <br><br>
+        <input type="button" id="button" value="7" onclick="form.answer.value += '7'">
+        
+        <input type="button" id="button" value="8" onclick="form.answer.value += '8'">
+        <input type="button" id="button" value="9" onclick="form.answer.value += '9'">
+        <input type="button" id="button" value="-" onclick="form.answer.value += '-'">
+        <input type="button" id="button" value="log" onclick="log()">
+        
+        <br><br>
+        <input type="button" id="button" value="0" onclick="form.answer.value += '0'">
+        <input type="button" id="button"value="." onclick="form.answer.value += '.'">
+        <input type="button" id="button" value="+" onclick="form.answer.value += '+'">
+        
+        <input type="button" id="button" value="x^y" onclick="pow()">
+        <input type="button" id="equal" value="=" onclick="form.answer.value = eval(form.answer.value)">
+        <br><br>
+        <input type="button"  value="C" id="clr" onclick="form.answer.value= ''">
+        <input type="button"  value="DEL" id="del" onclick="backspace()">
+        
+    </form>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+    
+</body>
+</html>
